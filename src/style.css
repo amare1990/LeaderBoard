@@ -8,7 +8,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   background-color: #698b7d;
 }
 
@@ -37,11 +37,10 @@ body {
 .scores {
   display: flex;
   flex-direction: column;
-/*   align-items: center; */
   justify-content: space-between;
   gap: 20px;
   padding-right: 36px;
-  width: 100%;
+  width: 50%;
 }
 
 .score-container {
@@ -61,7 +60,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap:  20px;
+  gap: 20px;
 }
 
 .submit-btn {
@@ -70,8 +69,8 @@ body {
 }
 
 .project-title,
-.recent-scores, 
-.refresh-btn, 
+.recent-scores,
+.refresh-btn,
 .score-container,
 .add-score-text,
 input,

@@ -14,7 +14,6 @@ wrapper.append(container);
 const scores = document.createElement('div');
 scores.className = 'scores';
 
-
 const recentScores = document.createElement('p');
 recentScores.className = 'recent-scores';
 recentScores.innerHTML = 'Recent Scores';
@@ -38,7 +37,7 @@ scorecontainer.className = 'score-container';
 scorecontainer.innerHTML = 'Here score loading';
 scores.append(scorecontainer);
 
-//Add your score
+// Add your score
 const addScoreDiv = document.createElement('div');
 addScoreDiv.className = 'add-score-text';
 const addScoreHeading = document.createElement('p');
@@ -67,4 +66,3 @@ submitBtn.className = 'submit-btn';
 submitBtn.innerHTML = 'Submit';
 
 addScoreDiv.append(submitBtn);
-
