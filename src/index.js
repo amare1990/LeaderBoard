@@ -2,11 +2,11 @@ import './style.css';
 
 const wrapper = document.querySelector('.wrapper');
 
-const heading = document.createElement('h1');
+/* const heading = document.createElement('h1');
 heading.className = 'project-title';
 heading.innerHTML = 'Leaderboard';
 wrapper.append(heading);
-
+ */
 const container = document.createElement('div');
 container.className = 'container';
 wrapper.append(container);
