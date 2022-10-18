@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Courier New', Courier, monospace;
+  background-color: #698b7d;
+}
+
+.wrapper {
+  padding: 20px 50px 20px 10px;
+  width: 90%;
+  height: 60vh;
+  background-color: #fefefe;
+  margin: 50px auto;
+}
+
+.container {
+  padding-left: 50px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.show-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+/*   align-items: center; */
+  justify-content: space-between;
+  gap: 20px;
+  padding-right: 36px;
+  width: 100%;
+}
+
+.score-container {
+  border: 2px solid #121212;
+}
+
+.add-score-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap:  20px;
+}
+
+.submit-btn {
+  display: flex;
+  align-self: flex-end;
+}
+
+.project-title,
+.recent-scores, 
+.refresh-btn, 
+.score-container,
+.add-score-text,
+input,
+.submit-btn {
+  font-weight: 600;
+}
