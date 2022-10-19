@@ -4,18 +4,17 @@ export default class Score {
     this.score = score;
   }
 
-  getScores = () => {
+  parseScores = () => {
     let dataStored = [];
     let scores = [];
     if (localStorage.getItem('scores')) {
       dataStored = localStorage.getItem('scores');
-      // console.log(dataStored);
       scores = JSON.parse(dataStored);
     }
     return scores;
   }
 
-  addScore = () => {
+  submitScore = () => {
     const scores = this.getScores();
     scores.push(this);
     localStorage.setItem('scores', JSON.stringify(scores));
