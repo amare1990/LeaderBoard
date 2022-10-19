@@ -44,7 +44,19 @@ body {
 }
 
 .score-container {
+  list-style: none;
   border: 2px solid #121212;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.score-item:nth-child(odd) {
+  background-color: #e1e6eb;
 }
 
 .add-score-text {
@@ -75,5 +87,13 @@ body {
 .add-score-text,
 input,
 .submit-btn {
+  font-weight: 600;
+}
+
+.error-message {
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  color: red;
   font-weight: 600;
 }
