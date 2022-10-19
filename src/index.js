@@ -1,12 +1,6 @@
 import './style.css';
-import {submitBtn, refreshBtn, name, score} from './modules/variables.js';
-
-//const submitBtn = document.createElement('button');
-submitBtn.setAttribute('type', 'submit');
-submitBtn.className = 'submit-btn';
-submitBtn.innerHTML = 'Submit';
-
-addScoreDiv.append(submitBtn);
+import {submitBtn, refreshBtn, name, score, errMessage} from './modules/variables.js';
+import { createScore, displayScores, refreshPage } from './modules/logics.js';
 
 
 //User Interface here
