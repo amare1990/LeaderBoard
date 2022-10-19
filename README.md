@@ -15,7 +15,7 @@
 ## Getting Started
 
 **You can clone my project and use it freely and then contribute to this project.
-To get the local copy, use the following command. git clone https://github.com/amare1990/LeaderBoard.git **
+To get the local copy, use the following command. git clone https://github.com/amare1990/LeaderBoard.git.**
 
 ### Prerequisites
 You have to setup webpack bundler
