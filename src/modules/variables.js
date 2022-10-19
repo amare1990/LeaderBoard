@@ -28,7 +28,6 @@ container.append(scores);
 // ul for dynamic score show
 const scorecontainer = document.createElement('ul');
 scorecontainer.className = 'score-container';
-scorecontainer.innerHTML = 'Here score loading';
 scores.append(scorecontainer);
 
 // Add your score
