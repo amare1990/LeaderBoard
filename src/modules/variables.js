@@ -66,5 +66,7 @@ submitBtn.innerHTML = 'Submit';
 
 addScoreDiv.append(submitBtn);
 
-export {wrapper, container, scores, recentScores, refreshBtn, showScoresTitle, scorecontainer, 
-addScoreDiv, inputFieldsWrapper, name, score, errMessage, submitBtn};
+export {
+  wrapper, container, scores, recentScores, refreshBtn, showScoresTitle, scorecontainer,
+  addScoreDiv, inputFieldsWrapper, name, score, errMessage, submitBtn,
+};

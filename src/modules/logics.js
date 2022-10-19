@@ -1,6 +1,5 @@
 import Score from './score.js';
-import { wrapper, container, scores, recentScores, refreshBtn, showScoresTitle, scorecontainer, 
-  addScoreDiv, inputFieldsWrapper, name, score, errMessage, submitBtn } from './variables.js';
+import { scorecontainer, name, score } from './variables.js';
 
 const createScore = () => {
   const nameValue = name.value;

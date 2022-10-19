@@ -1,9 +1,10 @@
 import './style.css';
-import {submitBtn, refreshBtn, name, score, errMessage} from './modules/variables.js';
+import {
+  submitBtn, refreshBtn, name, score, errMessage,
+} from './modules/variables.js';
 import { createScore, displayScores, refreshPage } from './modules/logics.js';
 
-
-//User Interface here
+// User Interface here
 submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
   if (name.value === '' || score.value === '') {

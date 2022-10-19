@@ -15,7 +15,7 @@ export default class Score {
   }
 
   submitScore = () => {
-    const scores = this.getScores();
+    const scores = this.parseScores();
     scores.push(this);
     localStorage.setItem('scores', JSON.stringify(scores));
   }
