@@ -16,6 +16,7 @@ refreshBtn.setAttribute('type', 'button');
 refreshBtn.className = 'refresh-btn';
 refreshBtn.innerHTML = 'Refresh';
 
+// Wrapper for recent scores text and refresh button
 const showScoresTitle = document.createElement('div');
 showScoresTitle.className = 'show-title';
 
@@ -24,8 +25,8 @@ showScoresTitle.append(refreshBtn);
 scores.append(showScoresTitle);
 container.append(scores);
 
-// Div for dynamic score show
-const scorecontainer = document.createElement('div');
+// ul for dynamic score show
+const scorecontainer = document.createElement('ul');
 scorecontainer.className = 'score-container';
 scorecontainer.innerHTML = 'Here score loading';
 scores.append(scorecontainer);
@@ -52,13 +53,19 @@ score.placeholder = 'Your score';
 inputFieldsWrapper.append(score);
 
 // error message handling
-<p class="error-message font">
-  Please enter a valid name and score. Scores must be just number
-</p>
-
-const errMessage = document.querySelector('.error-message');
+const errMessage = document.createElement('p');
+errMessage.className = 'error-message';
+errMessage.innerHTML = 'Please enter a valid name and score. Scores must be just number';
+addScoreDiv.append(errMessage);
 
 addScoreDiv.append(inputFieldsWrapper);
 
+const submitBtn = document.createElement('button');
+submitBtn.setAttribute('type', 'submit');
+submitBtn.className = 'submit-btn';
+submitBtn.innerHTML = 'Submit';
+
+addScoreDiv.append(submitBtn);
+
 export {wrapper, container, scores, recentScores, refreshBtn, showScoresTitle, scorecontainer, 
-addScoreDiv, inputFieldsWrapper, name, score, errMessage};
+addScoreDiv, inputFieldsWrapper, name, score, errMessage, submitBtn};
