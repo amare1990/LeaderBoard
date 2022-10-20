@@ -3,7 +3,7 @@ import {
   submitBtn, refreshBtn, name, score, errMessage,
 } from './modules/variables.js';
 import { displayScores} from './modules/logics.js';
-import { sendScore, receiveScores } from './modules/game.js';
+import { sendScore, receiveScores, createGame} from './modules/game.js';
 import Score from './modules/score.js';
 
 // User Interface here
@@ -17,10 +17,11 @@ window.onload = () => {
   showFormerData();
 
 
-/* refreshBtn.addEventListener('click', (event) => {
+ refreshBtn.addEventListener('click', async (event) => {
   event.preventDefault();
-  window.location.reload();
-}); */
+  scoresArray = await getScores();
+  showScore(scoresArray);
+}); 
 
 submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
@@ -28,10 +29,12 @@ submitBtn.addEventListener('click', (event) => {
   const nameValue = name.value;
   const scoreValue = score.value;
   console.log('name value  '+ nameValue + ' '+ scoreValue);
-  //scoresArray.push(scores);
   const scoreObj = new Score(nameValue, scoreValue);
-  sendScore(nameValue, scoreValue);
-  scoresArray.result.push(scoreObj);
+  sendScore(scoreObj);
+  scoresArray.result.push({
+    name: nameValue,
+    score: scoreValue,
+  });
   console.log("Array "+ scoresArray.result[0].name);
   displayScores(scoresArray);
  

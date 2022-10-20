@@ -13,27 +13,28 @@ const options = {
   body: JSON.stringify(game)
 }
   const response = await fetch (postURL, options);
-  console.log('status on creaing '+response.status );
+  console.log('status on creaing '+response.ID );
   const  responseJSON = await (response.json());
   return responseJSON;
 };
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/hh583K88Z301S74t13UM/scores';
-const sendScore = async (name, score) => {
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/GzQIWWMbMVJqpo3Ez4g3/scores';
+const sendScore = async (scoreObj) => {
+  console.log(JSON.stringify(scoreObj) +'  try1');
   const options = {
     method: 'POST',
-    body: JSON.stringify({name, score}),
-    headers: {'Content-Type': 'application/json'},  
+    body: JSON.stringify(scoreObj),
+    headers: { 'Accept': 'application/json','Content-Type': 'application/json; charset=UTF-8'}
   };
 
-  const response = await fetch(url, options);
+  const response = await fetch(url, options).then((response)=> {return response.json()});
   console.log('status on sending'+response.status );
-  if(response.status === 200) {
+ /*  if(response.status === 200) {
     console.log('Bingo! sending possible');
     return await (response.json());
   }
   else {
-    throw new Error ('Something Bad happened when sending score');
-  }
+    throw Error ('Something Bad happened when sending score');
+  } */
 }
 
 const receiveScores = async () => {
@@ -48,7 +49,7 @@ const receiveScores = async () => {
     return await (response.json());
   }
   else {
-    throw new Error ('Something Bad happened when receiving score');
+    throw Error ('Something Bad happened when receiving score');
   }
 };
 
