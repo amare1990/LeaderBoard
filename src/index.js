@@ -1,13 +1,14 @@
 import './style.css';
-import {
-  submitBtn, refreshBtn, name, score, errMessage,
-} from './modules/variables.js';
 import { displayScores} from './modules/logics.js';
-import { sendScore, receiveScores, createGame} from './modules/game.js';
+import { sendScore, receiveScores} from './modules/game.js';
 import Score from './modules/score.js';
 
-// User Interface here
+const refreshBtn = document.querySelector('.refresh-btn');
+const submitBtn = document.querySelector('.submit-btn');
+const name = document.querySelector('.name');
+const score = document.querySelector('.score');
 
+// User Interface here
 window.onload = () => {
   let scoresArray = [];
   const showFormerData = async () => {
