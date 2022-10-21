@@ -12,7 +12,32 @@
       <h1 class="project-titlle">
         LeaderBoard
       </h1>
+
+      <div class="container">
+        <div class="scores">
+          <div class="show-title">
+            <p class="recent-scores">Recent Scores</p>
+            <button class="refresh-btn">
+              Refresh
+            </button>
+          </div>
+          <ul class="score-container">
+
+          </ul>
+        </div>
+        <div class="add-score-text">
+          <p>Add your score </p>
+          <div class="input-field">
+            <input type="text" class="name" placeholder="Your name" required>
+            <input type="number" class="score" placeholder="Your score" required>
+          </div>
+          <button class="submit-btn" type="submit">Submit</button>
+        </div>
+
+      </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   </body>
 
 </html>
