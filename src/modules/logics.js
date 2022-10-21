@@ -9,7 +9,12 @@ const displayScores = (scoresArray) => {
     const scoreListItem = document.createElement('li');
     scoreListItem.className = 'score-item';
     const nameTag = document.createElement('p');
-    nameTag.innerHTML = scoresArray.result[i].user;
+    if(i === scoresArray.result.length-1) {
+      nameTag.innerHTML = scoresArray.result[i].name;
+    }
+    else {
+      nameTag.innerHTML = scoresArray.result[i].user;
+    }
     const scoreTag = document.createElement('p');
     scoreTag.innerHTML = scoresArray.result[i].score;
     scoreListItem.append(nameTag);
