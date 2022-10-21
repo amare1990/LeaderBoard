@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-> This web application project allows a user to add his/her name and score and see the recent scores of users that added their scores recently. Specifically, this milestone of the project is supposed to send and receive data from the given origin server and api end points. The milestone of this project also requires to display the data on the screen.
+> This web application project allows a user to add his/her name and score and see the recent scores of users that added their scores recently. Specifically, the second milestone of the project is supposed to send and receive data from the given origin server and api end points. The second milestone of this project also requires to display the data on the screen. the third mile stone of this project requires to add my styles to the project. To tailor to my CSS styles, I have add and updated the markup page, the CSS styles file and the JavaScript code file. 
 
 
 ## Built With
