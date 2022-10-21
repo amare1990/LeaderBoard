@@ -31,11 +31,13 @@ const displayScores = (scoresArray) => {
     nameTag.innerHTML = scoresArray.result[i].name;
     const scoreTag = document.createElement('p');
     scoreTag.innerHTML = scoresArray.result[i].score;
+    console.log(scoresArray.result[i].score+ '  inside displayScore()')
     scoreListItem.append(nameTag);
     scoreListItem.append(scoreTag);
     scorecontainer.appendChild(scoreListItem);
   }
   // score.append(scorecontainer);
+  
 };
 
 /* const refreshPage = () => {

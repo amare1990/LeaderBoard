@@ -1,4 +1,5 @@
 import { method } from "lodash";
+import axios  from "axios";
 const createGame = async () => {
   const postURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
   const game = { 
@@ -17,25 +18,24 @@ const options = {
   const  responseJSON = await (response.json());
   return responseJSON;
 };
+
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/GzQIWWMbMVJqpo3Ez4g3/scores';
 const sendScore = async (scoreObj) => {
-  console.log(JSON.stringify(scoreObj) +'  try1');
-  const options = {
-    method: 'POST',
-    body: JSON.stringify(scoreObj),
-    headers: { 'Accept': 'application/json','Content-Type': 'application/json; charset=UTF-8'}
-  };
-
-  const response = await fetch(url, options).then((response)=> {return response.json()});
-  console.log('status on sending'+response.status );
- /*  if(response.status === 200) {
-    console.log('Bingo! sending possible');
-    return await (response.json());
+  try {
+    const response = await axios.post(
+      `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/GzQIWWMbMVJqpo3Ez4g3/scores/`,
+      { user: scoreObj.name, score: scoreObj.score },
+      {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      }
+    );
+    console.log(response);
+  } catch (error) {
+    console.log(error.message);
   }
-  else {
-    throw Error ('Something Bad happened when sending score');
-  } */
-}
+};
 
 const receiveScores = async () => {
   const options = {

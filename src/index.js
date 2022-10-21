@@ -16,29 +16,27 @@ window.onload = () => {
   };
   showFormerData();
 
-
  refreshBtn.addEventListener('click', async (event) => {
   event.preventDefault();
-  scoresArray = await getScores();
-  showScore(scoresArray);
-}); 
+  scoresArray = await receiveScores();
+  displayScores(scoresArray);
+ }); 
 
-submitBtn.addEventListener('click', (event) => {
+ submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
 
   const nameValue = name.value;
   const scoreValue = score.value;
-  console.log('name value  '+ nameValue + ' '+ scoreValue);
   const scoreObj = new Score(nameValue, scoreValue);
+
   sendScore(scoreObj);
-  scoresArray.result.push({
-    name: nameValue,
-    score: scoreValue,
-  });
-  console.log("Array "+ scoresArray.result[0].name);
+
+  scoresArray.result.push(scoreObj);
   displayScores(scoresArray);
  
   name.value = '';
   score.value = '';
-});
-} //end of window on loasd
+
+ }); //End of submitBtn event handling
+
+} //end of window on load event
