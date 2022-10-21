@@ -14,7 +14,6 @@ const options = {
   body: JSON.stringify(game)
 }
   const response = await fetch (postURL, options);
-  console.log('status on creaing '+response.ID );
   const  responseJSON = await (response.json());
   return responseJSON;
 };
@@ -31,7 +30,6 @@ const sendScore = async (scoreObj) => {
         },
       }
     );
-    console.log(response);
   } catch (error) {
     console.log(error.message);
   }
@@ -43,9 +41,7 @@ const receiveScores = async () => {
     headers: {'Content-Type': 'application/json'},
   };
   const response = await fetch(url, options);
-  console.log('status on receiving '+response.status );
   if(response.status === 200) {
-    console.log('Bingo! receiving enabled');
     return await (response.json());
   }
   else {
