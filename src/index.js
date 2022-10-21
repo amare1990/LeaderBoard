@@ -32,11 +32,10 @@ window.onload = () => {
     const scoreValue = score.value;
     const scoreObj = new Score(nameValue, scoreValue);
 
-    if(nameValue === '' || scoreValue === 0) {
+    if (nameValue === '' || scoreValue === 0) {
       errorMessage.style.display = 'block';
       addScore.append(errorMessage);
-    }
-    else {
+    } else {
       sendScore(scoreObj);
     }
 
