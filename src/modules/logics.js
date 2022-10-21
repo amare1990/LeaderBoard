@@ -1,37 +1,22 @@
-import Score from './score.js';
-import { scorecontainer, name, score } from './variables.js';
+const scorecontainer = document.querySelector('.score-container');
 
-const createScore = () => {
-  const nameValue = name.value;
-  const scoreValue = score.value;
-  const scoreObj = new Score(nameValue, scoreValue);
-  scoreObj.submitScore();
-  const newScoreLi = document.createElement('li');
-  newScoreLi.className = 'score-item';
-  scorecontainer.appendChild(newScoreLi);
-  newScoreLi.innerHTML = `
-    <p class="score-name">${scoreObj.name}:</p>
-    <p class="score-text">${scoreObj.score}</p>
-    `;
-  name.value = '';
-  score.value = '';
+const displayScores = (scoresArray) => {
+  scorecontainer.innerHTML = '';
+  for (let i = 0; i < scoresArray.result.length; i += 1) {
+    const scoreListItem = document.createElement('li');
+    scoreListItem.className = 'score-item';
+    const nameTag = document.createElement('p');
+    if (i === scoresArray.result.length - 1) {
+      nameTag.innerHTML = scoresArray.result[i].name;
+    } else {
+      nameTag.innerHTML = scoresArray.result[i].user;
+    }
+    const scoreTag = document.createElement('p');
+    scoreTag.innerHTML = scoresArray.result[i].score;
+    scoreListItem.append(nameTag);
+    scoreListItem.append(scoreTag);
+    scorecontainer.append(scoreListItem);
+  }
 };
 
-const displayScores = () => {
-  const scores = new Score().parseScores();
-  scores.forEach((score) => {
-    const newScoreLi = document.createElement('li');
-    newScoreLi.className = 'score-item';
-    scorecontainer.appendChild(newScoreLi);
-    newScoreLi.innerHTML = `
-            <p class="score-name">${score.name}:</p>
-            <p class="score-text">${score.score}</p>
-        `;
-  });
-};
-
-const refreshPage = () => {
-  window.location.reload();
-};
-
-export { createScore, displayScores, refreshPage };
+export default displayScores;
