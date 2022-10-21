@@ -1,6 +1,6 @@
 import './style.css';
-import { displayScores} from './modules/logics.js';
-import { sendScore, receiveScores} from './modules/game.js';
+import displayScores from './modules/logics.js';
+import { sendScore, receiveScores } from './modules/game.js';
 import Score from './modules/score.js';
 
 const refreshBtn = document.querySelector('.refresh-btn');
@@ -17,27 +17,25 @@ window.onload = () => {
   };
   showFormerData();
 
- refreshBtn.addEventListener('click', async (event) => {
-  event.preventDefault();
-  scoresArray = await receiveScores();
-  displayScores(scoresArray);
- }); 
+  refreshBtn.addEventListener('click', async (event) => {
+    event.preventDefault();
+    scoresArray = await receiveScores();
+    displayScores(scoresArray);
+  });
 
- submitBtn.addEventListener('click', (event) => {
-  event.preventDefault();
+  submitBtn.addEventListener('click', (event) => {
+    event.preventDefault();
 
-  const nameValue = name.value;
-  const scoreValue = score.value;
-  const scoreObj = new Score(nameValue, scoreValue);
+    const nameValue = name.value;
+    const scoreValue = score.value;
+    const scoreObj = new Score(nameValue, scoreValue);
 
-  sendScore(scoreObj);
+    sendScore(scoreObj);
 
-  scoresArray.result.push(scoreObj);
-  displayScores(scoresArray);
- 
-  name.value = '';
-  score.value = '';
+    scoresArray.result.push(scoreObj);
+    displayScores(scoresArray);
 
- }); //End of submitBtn event handling
-
-} //end of window on load event
+    name.value = '';
+    score.value = '';
+  }); // End of submitBtn event handling
+}; // end of window on load event

@@ -89,11 +89,3 @@ input,
 .submit-btn {
   font-weight: 600;
 }
-
-.error-message {
-  display: none;
-  font-size: 18px;
-  text-align: center;
-  color: red;
-  font-weight: 600;
-}

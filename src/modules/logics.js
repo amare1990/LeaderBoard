@@ -1,18 +1,14 @@
 const scorecontainer = document.querySelector('.score-container');
 
 const displayScores = (scoresArray) => {
-
   scorecontainer.innerHTML = '';
-  console.log ('Length of scoresArray= '+ scoresArray.result.length);
- 
-  for(let i = 0; i < scoresArray.result.length; i += 1) {
+  for (let i = 0; i < scoresArray.result.length; i += 1) {
     const scoreListItem = document.createElement('li');
     scoreListItem.className = 'score-item';
     const nameTag = document.createElement('p');
-    if(i === scoresArray.result.length-1) {
+    if (i === scoresArray.result.length - 1) {
       nameTag.innerHTML = scoresArray.result[i].name;
-    }
-    else {
+    } else {
       nameTag.innerHTML = scoresArray.result[i].user;
     }
     const scoreTag = document.createElement('p');
@@ -21,7 +17,6 @@ const displayScores = (scoresArray) => {
     scoreListItem.append(scoreTag);
     scorecontainer.append(scoreListItem);
   }
-  
 };
 
-export { displayScores };
+export default displayScores;
