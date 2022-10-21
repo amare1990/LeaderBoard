@@ -51,7 +51,7 @@ body {
 .score-item {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding-left: 10px;
 }
 
