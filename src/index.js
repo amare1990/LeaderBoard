@@ -7,6 +7,8 @@ const refreshBtn = document.querySelector('.refresh-btn');
 const submitBtn = document.querySelector('.submit-btn');
 const name = document.querySelector('.name');
 const score = document.querySelector('.score');
+const errorMessage = document.querySelector('.error-message');
+const addScore = document.querySelector('.add-score-text');
 
 // User Interface here
 window.onload = () => {
@@ -30,7 +32,12 @@ window.onload = () => {
     const scoreValue = score.value;
     const scoreObj = new Score(nameValue, scoreValue);
 
-    sendScore(scoreObj);
+    if (nameValue === '' || scoreValue === 0) {
+      errorMessage.style.display = 'block';
+      addScore.append(errorMessage);
+    } else {
+      sendScore(scoreObj);
+    }
 
     scoresArray.result.push(scoreObj);
     displayScores(scoresArray);

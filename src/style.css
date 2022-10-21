@@ -14,8 +14,8 @@ body {
 
 .wrapper {
   padding: 20px 50px 20px 10px;
-  width: 90%;
-  height: 60vh;
+  width: 60%;
+  height: auto;
   background-color: #fefefe;
   margin: 50px auto;
 }
@@ -51,7 +51,7 @@ body {
 .score-item {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-left: 10px;
 }
 
@@ -88,4 +88,34 @@ body {
 input,
 .submit-btn {
   font-weight: 600;
+}
+
+input {
+  padding: 5px 0 5px 5px;
+  border-radius: 7px;
+  border: 1px solid #555;
+}
+
+.btn {
+  color: #fefefe;
+  font-size: 14px;
+  background-color: rgb(15, 158, 110);
+  box-shadow: 5px 5px 4px #222;
+  padding: 3px 5px;
+  border-radius: 7px;
+}
+
+.sub-title {
+  font-size: 20px;
+  color: #fefefe;
+  background-color: #2a3b99;
+  padding: 3px 5px;
+  border-radius: 7px;
+}
+
+.error-message {
+  display: none;
+  color: red;
+  font-size: 17px;
+  font-style: italic;
 }
