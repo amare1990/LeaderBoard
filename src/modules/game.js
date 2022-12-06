@@ -1,4 +1,5 @@
 import axios from 'axios';
+import apiID from './apiID.js';
 
 const createGame = async () => {
   const postURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
@@ -18,12 +19,14 @@ const createGame = async () => {
   return responseJSON;
 };
 
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/GzQIWWMbMVJqpo3Ez4g3/scores';
+const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
+  apiID}/scores`;
 const sendScore = async (scoreObj) => {
   try {
     await axios.post(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/GzQIWWMbMVJqpo3Ez4g3/scores/',
-      { user: scoreObj.name, score: scoreObj.score },
+      `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
+        apiID}/scores/`,
+      { user: scoreObj.user, score: scoreObj.score },
       {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
