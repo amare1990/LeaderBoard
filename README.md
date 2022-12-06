@@ -15,7 +15,7 @@
 ## Getting Started
 
 **You can clone my project and use it freely and then contribute to this project.
-To get the local copy, use  `git clone https://github.com/amare1990/LeaderBoard.git` command. After that you have to install webpack from the root directory of this repository. Use the `npm install --save-dev webpack webpack-cli` command to install webpack. Whenever you modify webpack configuration files or package.json file, you must build it again by running `npm run build` command from your root directory. Use `npm start` and particulary `npm install & npm start` command if you have modified it to run this project. **
+To get the local copy, use  `git clone https://github.com/amare1990/LeaderBoard.git` command. After that you have to install webpack from the root directory of this repository. Use the `npm install --save-dev webpack webpack-cli` command to install webpack. Whenever you modify webpack configuration files or package.json file, you must build it again by running `npm run build` command from your root directory. Use `npm start` and particulary `npm install & npm start` command if you have modified it to run this project.**
 
 
 ### Prerequisites
