@@ -10,8 +10,6 @@ const score = document.querySelector('.score');
 const errorMessage = document.querySelector('.error-message');
 const addScore = document.querySelector('.add-score-text');
 
-// User Interface here
-window.onload = () => {
   let scoresArray = [];
   const showFormerData = async () => {
     scoresArray = await receiveScores();
@@ -44,5 +42,4 @@ window.onload = () => {
 
     name.value = '';
     score.value = '';
-  }); // End of submitBtn event handling
-}; // end of window on load event
+  }); 
