@@ -120,8 +120,7 @@ input {
   font-style: italic;
 }
 
-@media screen and (max-width: 767.98px){
-
+@media screen and (max-width: 767.98px) {
   .wrapper {
     padding: 20px 50px 20px 10px;
     width: 90%;
@@ -138,9 +137,8 @@ input {
     gap: 20px;
     width: 80%;
   }
+
   .submit-btn {
     margin-right: 90px;
-
   }
-
 }
