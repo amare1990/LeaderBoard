@@ -40,7 +40,7 @@ body {
   justify-content: space-between;
   gap: 20px;
   padding-right: 36px;
-  width: 50%;
+  width: 40%;
 }
 
 .score-container {
@@ -122,20 +122,43 @@ input {
 
 @media screen and (max-width: 767.98px) {
   .wrapper {
-    padding: 20px 50px 20px 10px;
-    width: 90%;
+    padding: 20px 1px 20px 5px;
+    width: 67%;
     height: auto;
     background-color: #fefefe;
     margin: 50px auto;
+  }
+  .container {
+    padding-left: 5px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .add-score-text {
+    margin-left: 10px;
+  }
+
+  .sub-title {
+    padding-left: 1px;
+    font-size: 16px;
   }
 
   .input-field {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
-    width: 80%;
+  }
+
+  input {
+    width: 70%;
+  }
+
+  .score-container {
+    width: 115px;
   }
 
   .submit-btn {
