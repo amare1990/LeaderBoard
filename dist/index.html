@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LeaderBoard Web Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 
   <body>
@@ -12,6 +13,31 @@
       <h1 class="project-titlle">
         LeaderBoard
       </h1>
+
+      <div class="container">
+        <div class="scores">
+          <div class="show-title">
+            <p class="recent-scores sub-title">Recent Scores</p>
+            <button class="refresh-btn btn" type="button">
+              <i class="fa fa-refresh"></i>
+            </button>
+          </div>
+          <ul class="score-container">
+
+          </ul>
+        </div>
+        <div class="add-score-text">
+          <p class="sub-title">Add your score </p>
+          <div class="input-field">
+            <input type="text" class="name" placeholder="Your name" required>
+            <input type="number" class="score" placeholder="Your score" required>
+          </div>
+          <button class="submit-btn btn" type="submit">Submit</button>
+        </div>
+
+        <p class="error-message"> Enter the required fields please!</p>
+
+      </div>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
