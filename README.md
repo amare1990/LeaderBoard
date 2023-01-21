@@ -28,12 +28,13 @@ You have to setup webpack bundler
 
 - GitHub: [@githubhandle](https://github.com/amare1990)
 - Twitter: [@twitterhandle](https://twitter.com/@amaremek)
+- LinkedIn: [@linkedInHandle](https://www.linkedin.com/in/amaremek/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/amare1990/LeaderBoard/issues/).
 
 ## Show your support
 
