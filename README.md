@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-> This web application project allows a user to add his/her name and score and see the recent scores of users that added their scores recently. Specifically, the second milestone of the project is supposed to send and receive data from the given origin server and api end points. The second milestone of this project also requires to display the data on the screen. The third mile stone of this project requires to add styles to the project wireframe layout. To tailor to my CSS styles, I have added and updated the markup page, the CSS styles file and the JavaScript code file. 
+> This web application project allows a user to add his/her name and score, and see the recent scores of users that added their scores recently. Specifically, the second milestone of the project is supposed to send and receive data from the given origin server and api end points. The second milestone of this project also requires to display the data on the screen. The third mile stone of this project requires to add styles to the project wireframe layout. To tailor to my CSS styles, I have added and updated the markup page, the CSS styles file and the JavaScript code file. 
 
 
 ## Built With
@@ -47,4 +47,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT/https://github.com/amare1990/LeaderBoard](./LICENSE) licensed.
+This project is [MIT](https://github.com/amare1990/LeaderBoard/LICENSE) licensed.
