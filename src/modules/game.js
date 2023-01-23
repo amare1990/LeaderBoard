@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const createGame = async () => {
+/* const createGame = async () => {
   const postURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
   const game = {
     name: 'My cool new game',
@@ -16,11 +16,11 @@ const createGame = async () => {
   const response = await fetch(postURL, options);
   const responseJSON = await (response.json());
   return responseJSON;
-};
+}; */
 
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/GzQIWWMbMVJqpo3Ez4g3/scores';
 const sendScore = async (scoreObj) => {
-  try {
+  /* try {
     await axios.post(
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/GzQIWWMbMVJqpo3Ez4g3/scores/',
       { user: scoreObj.name, score: scoreObj.score },
@@ -32,7 +32,14 @@ const sendScore = async (scoreObj) => {
     );
   } catch (error) {
     console.log(error.message);
-  }
+  } */
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({ user: scoreObj.name, score: scoreObj.score }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8'
+    }
+  })
 };
 
 const receiveScores = async () => {
@@ -48,4 +55,4 @@ const receiveScores = async () => {
   throw Error('Something Bad happened when receiving score');
 };
 
-export { createGame, sendScore, receiveScores };
+export { sendScore, receiveScores };

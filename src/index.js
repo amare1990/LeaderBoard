@@ -13,6 +13,7 @@ window.onload = () => {
   let scoresArray = [];
   const showFormerData = async () => {
     scoresArray = await receiveScores();
+    // console.log(scoresArray)
     displayScores(scoresArray);
   };
   showFormerData();
