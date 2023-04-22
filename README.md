@@ -47,4 +47,4 @@ Give a ⭐️ if you like this project, and you are welcome to contribute to thi
 
 ## 📝 License
 
-This project is [MIT](https://github.com/amare1990/LeaderBoard/.LICENSE) licensed.
+This project is [MIT](./LICENSE) licensed.
