@@ -78,6 +78,7 @@ body {
 .submit-btn {
   display: flex;
   align-self: flex-end;
+  cursor: pointer;
 }
 
 .project-title,

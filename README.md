@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Leaderboard
 
 > This web application project allows a user to add name and score of a player, and see the recent scores of users that added their scores recently. The players data are sent and received to/from the given origin server api end points using JavaScript fetch API. HTML5, CSS3, and JavaScript are used to build this application.
@@ -9,6 +7,10 @@
 - Major languages: HTML5, CSS5, JavaScript
 - Frameworks: No frameworks used.
 - Technologies used: Gitflow, Git, GitHub, VS code editor, webpack.
+
+## Demonstration and Website
+
+[Deployment link](https://friendly-croquembouche-2faf30.netlify.app/)
 
 
 ## Getting Started

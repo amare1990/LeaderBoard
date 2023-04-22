@@ -26,7 +26,7 @@ const sendScore = async (scoreObj) => {
     await axios.post(
       `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${
         apiID}/scores/`,
-      { user: scoreObj.user, score: scoreObj.score },
+      { user: scoreObj.user, score: scoreObj.score } ,
       {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
