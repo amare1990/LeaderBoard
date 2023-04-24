@@ -28,7 +28,8 @@ submitBtn.addEventListener('click', (event) => {
 
   const nameValue = name.value;
   const scoreValue = score.value;
-  const scoreObj = new Score(nameValue, scoreValue);
+  const time = new Date();
+  const scoreObj = new Score(nameValue, scoreValue, time);
 
   if (nameValue === '' || scoreValue === 0) {
     errorMessage.style.display = 'block';

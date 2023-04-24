@@ -14,7 +14,6 @@ body {
 
 .wrapper {
   padding: 20px 50px 20px 10px;
-  width: 60%;
   height: auto;
   background-color: #fefefe;
   margin: 50px auto;
@@ -46,6 +45,8 @@ body {
 .score-container {
   list-style: none;
   border: 2px solid #121212;
+  width: min-content;
+  padding-right: 2px;
 }
 
 .score-item {
@@ -104,6 +105,7 @@ input {
   box-shadow: 5px 5px 4px #222;
   padding: 3px 5px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .sub-title {
@@ -134,12 +136,13 @@ input {
     padding-left: 5px;
     padding-top: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
   .add-score-text {
-    margin-left: 10px;
+    margin: 30px 0 0 10px;
   }
 
   .sub-title {
@@ -159,11 +162,11 @@ input {
     width: 70%;
   }
 
-  .score-container {
-    width: 115px;
-  }
-
   .submit-btn {
     margin-right: 90px;
+  }
+
+  .scores {
+    width: unset;
   }
 }
